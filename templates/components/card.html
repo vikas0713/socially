@@ -6,6 +6,11 @@
   <div class="card-body">
     <h5 class="card-title">{{ post.title | title }}</h5>
     <p class="card-text">{{ post.content }}</p>
-    <a href="#" class="btn btn-primary"> {{ post.like_set.count }} Likes</a>
+      <h5>{{ post.like_set.count }} Likes | 0 Comments</h5>
+    {% if post.id in likes %}
+    <button href="#" class="btn btn-primary like" data="{{ post.id }}"> I Dislike this</button>
+      {% else %}
+    <button href="#" class="btn btn-primary like" data="{{ post.id }}"> I Like This</button>
+      {% endif %}
   </div>
 </div>

@@ -4,7 +4,7 @@
 
     <div class="row" >
         {% for post in all_posts %}
-            {% include 'components/card.html' with post=post %}
+            {% include 'components/card.html' with post=post likes=likes %}
         {% endfor %}
     </div>
 
