@@ -2,4 +2,11 @@
 
 {% block content %}
 
+    <div class="row" >
+        {% for post in all_posts %}
+            {% include 'components/card.html' with post=post %}
+        {% endfor %}
+    </div>
+
+
 {% endblock %}
